@@ -43,7 +43,7 @@
 							<p ng-if="colonne.name != 'lien' ">\{{ row[colonne.name] }}</p>
 						</td>
 						<td>
-							<button ng-click="showModal(row)" class="btn btn-info btn-sm">+<i class="glyphicon glyphicon-info-sign"></i></button>
+							<button ng-click="showModal(row)" class="btn btn-warning btn-xs">+<i class="glyphicon glyphicon-bookmark"></i></button>
 						</td>
 					</tr>
 				</tbody>
@@ -57,7 +57,7 @@
 	<div class="col-md-5"></div>
 	<div class="col-md-3">
 		
-			<uib-pagination total-items="nbTotalElem" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" ng-change="getData();" items-per-page="nbItemPerPage"></uib-pagination>
+			<uib-pagination total-items="nbTotalElem" ng-model="currentPage" max-size="maxSize" class="pagination" boundary-links="true" rotate="false" ng-change="getData();" items-per-page="nbItemPerPage"></uib-pagination>
 
 	</div>
 	<div class="col-md-4"></div>

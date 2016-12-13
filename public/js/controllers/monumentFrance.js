@@ -35,7 +35,7 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 	$scope.region = new Array();
 
 	$scope.items = ['item1', 'item2', 'item3'];
-    $scope.maxSize = 7;
+    $scope.maxSize = 3;
 
 	$scope.map = {
 		center: { 
