@@ -6,7 +6,7 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
     });
 
 	$scope.$log = $log;
-	$scope.mEtab = {};
+	$scope.monu = {};
 	
 	$scope.listeMonument = [];
 	$scope.nbItemPerPage = 30;
@@ -47,7 +47,7 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 		bounds: {},
 		scrollwheel: true
 	};	
-	$scope.etabMarkers = [];
+	$scope.monuMarkers = [];
 	$scope.mapReady = false;
 
 	$scope.filtres = ["INSEE", "TICO", "STAT", "REG", "PPRO", "DPRO", "SCLE", "COM", "DPT", "ADRS"];
@@ -228,16 +228,16 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 			templateUrl: 'monumentModal',
 			controller: function ($scope, $uibModalInstance) {
 				$scope.$log = $log;
-                $scope.mEtab = row;
+                $scope.monu = row;
                 $scope.colonnes = colonnes;
 
                 $scope.close = function() {
                 	$uibModalInstance.close();
                 };
             },
-			size: 'lg',
+			size: 'md',
 			resolve: {
-				mEtab: function () {
+				monu: function () {
 				  	return row;
 				}, 
 				colonnes: function() {
@@ -270,7 +270,7 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 
     $scope.buildMarkers = function(){
 
-		var createMarker = function(id, name, lat, lng, etab) {
+		var createMarker = function(id, name, lat, lng, monu) {
 
 			var marker = new google.maps.Marker({
 				id: id,
@@ -282,13 +282,13 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 	            	mouseover: $scope.onMouseOver,
 	            	mouseout: $scope.onMouseOut
 	            },
-	            etab: etab
+	            monu: monu
 			});
 			return marker;
 		};
 
 		
-		$scope.etabMarkers = [];
+		$scope.monuMarkers = [];
 		var markers = [];
 
 		var map = $scope.map.control.getGMap();
@@ -306,7 +306,7 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 		}
 
 		map.fitBounds(bounds); // map should be your map class
-		$scope.etabMarkers = markers;
+		$scope.monuMarkers = markers;
 	};
 
 	$scope.refreshMap = function(){	
@@ -317,12 +317,12 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 	}
 
 	$scope.onClick = function(marker, eventName, model) {
-		$scope.showModal(model.etab)
+		$scope.showModal(model.monu)
 	}
 
 	$scope.onMouseOver = function(marker, eventName, model){
 		marker.setAnimation(google.maps.Animation.BOUNCE);
-		angular.element(document.querySelector('#Etab-'+model.id)).trigger('mouseover');
+		angular.element(document.querySelector(model.id)).trigger('mouseover');
 	}
 
 	$scope.onMouseOut = function(marker, eventName, model){

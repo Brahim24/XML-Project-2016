@@ -7,19 +7,6 @@ var db_name = "merimee-MH",
 	default_elements_per_pages = 20,
 	default_order_by = 'REF';
 
-var dataAdaptater = {
-	'Region' : 'REG',
-	'Departement' : 'DPT',
-	'Commune' : 'COM',
-	'Insee' : 'INSEE',
-	'Tico' : 'TICO',
-	'Adresse' : 'ADRS',
-	'Statut' : 'STAT',
-	'Description' : 'PPRO',
-	'Annee' : 'DPRO',
-	'Siecle' : 'SCLE',
-};
-
 var default_parameters = {
 	where: '',
 	orderBy: default_order_by,

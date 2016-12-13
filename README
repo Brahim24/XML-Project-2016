@@ -1,31 +1,24 @@
-Prérequis :
+		XML-Project-2016
+	BEN ALLEL & GIANFALDONE
 
-BaseX
-FOP 2.0
-NodeJS
+	Énoncé : http://www-sop.inria.fr/members/Philippe.Poulard/projet-miage-2016.html
 
-Download FOP2.0 : apache.crihan.fr/dist/xmlgraphics/fop/binaries/fop-2.0-bin.zip
-/!\ Ne pas oublier d'ajouter le path du dossier fop2.0 dézipper dans vos variables d'environnements !
+	Requis : BaseX & NodeJS
 
-Données :
-http://www-sop.inria.fr/members/Philippe.Poulard/projet-miage-2015.html
+	URL : http://localhost:8024
 
-Mise en place du serveur : 
+	BdD :
+		Récupération de la bdd basex nommée 'merimee_HL'
+		# basex
+		# create db merimee_HL 
+		# quit
+		# basexserver
+	
+	Serveur Web :  
+	
+		Mise à jour des dépendances node
+		# npm install
+	
+		Lancement du serveur :
+		# npm start
 
-Base de données :
-
-	Mise en place d'une bdd basex nommée 'data_twx' contenant le fichier présent à data/etablissement_superieur.xml
-	# basex
-	# create db data_twx data/etablissement_superieur.xml
-	# quit
-	# basexserver
-
-Serveur Web :  
-
-	Mise à jour des dépendances node
-	# npm install
-
-	Lancement du serveur :
-	# npm start
-
-http://localhost:3000

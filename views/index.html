@@ -23,8 +23,8 @@
 
 <!-- TABLEAU -->
 <div class="row">
-	<div class="col-md-3"></div>
-	<div class="col-md-6">
+	<div class="col-md-2"></div>
+	<div class="col-md-8">
 		<div class="table">
 			<table class="table table-condensed table-bordered table-striped ">
 				<thead>
@@ -34,8 +34,8 @@
 					</tr>
 				</thead>
 
-				<tbody>
-					<tr id="Etab-\{{ listeMonument[$index].REF }}" ng-repeat="row in listeMonument track by $index">
+				<tbody class="text-center">
+					<tr id="-\{{ listeMonument[$index].REF }}" ng-repeat="row in listeMonument track by $index">
 						<td ng-repeat="colonne in output_collumns" >
 							<a href="\{{ row[colonne.name] }}" target="_blank" ng-if="colonne.name == 'lien' ">
 								\{{ row[colonne.name] }}
@@ -50,7 +50,7 @@
 			</table>
 		</div>
 	</div>
-	<div class="col-md-3"></div>
+	<div class="col-md-2"></div>
 </div>
 
 <div class="row">
@@ -67,14 +67,11 @@
 <script type="text/ng-template" id="monumentModal">
 	<div class="modal-header">		
 		<button type="button" class="close" ng-click="close()" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		<h4 class="modal-title">\{{ mEtab.nom }}</h4>
+		<h4 class="modal-title">\{{ monu.TICO }}</h4>
 	</div>
-	<div class="modal-body">
+	<div class="modal-body text-center">
 		<div ng-repeat="c in colonnes">
-			<strong>\{{ c.label }} :</strong> <p ng-if="c.name != 'lien'">\{{ mEtab[c.name] }}</p><a href="\{{ mEtab[c.name] }}" target="_blank" ng-if=" c.name == 'lien'">\{{ mEtab[c.name] }}</a>
+			<strong>\{{ c.label }} :</strong> <p ng-if="c.name != 'lien'">\{{ monu[c.name] }}</p><a href="\{{ monu[c.name] }}" target="_blank" ng-if=" c.name == 'lien'">\{{ monu[c.name] }}</a>
 		</div>
-	</div>
-	<div class="modal-footer">
-		<button type="button" class="btn btn-default" ng-click="close()">Close</button>
 	</div>
 </script>
