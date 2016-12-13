@@ -27,6 +27,6 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', routes);
 
 app.listen(port_defaut);
-console.log("Lancement du serveur : http://localhost:" + port_defaut + "/");
+console.log("Serveur lancé : http://localhost:" + port_defaut + "/");
 
 module.exports = app;

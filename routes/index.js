@@ -39,31 +39,6 @@ fs.readFile('./queries/magicQuery.xquery', 'utf8', function (err, data) {
 	if (err) throw err;
 	magicQuery = data;
 });
-var magicQueryXML = '';
-fs.readFile('./queries/magicQuery_xml.xquery', 'utf8', function (err, data) {
-	if (err) throw err;
-	magicQueryXML = data;
-});
-var queryGraphPiechart = '';
-fs.readFile('./queries/piechart.xquery', 'utf8', function (err, data) {
-	if (err) throw err;
-	queryGraphPiechart = data;
-});
-var queryGraphHistogram = '';
-fs.readFile('./queries/histogram.xquery', 'utf8', function (err, data) {
-	if (err) throw err;
-	queryGraphHistogram = data;
-});
-var queryGraphPiechartPDF = '';
-fs.readFile('./queries/piechart_pdf.xquery', 'utf8', function (err, data) {
-	if (err) throw err;
-	queryGraphPiechartPDF = data;
-});
-var queryGraphPHistogramPDF = '';
-fs.readFile('./queries/histogram_pdf.xquery', 'utf8', function (err, data) {
-	if (err) throw err;
-	queryGraphPHistogramPDF = data;
-});
 
 function constructWhereClause(filter) {
 	if(filter == "none"){

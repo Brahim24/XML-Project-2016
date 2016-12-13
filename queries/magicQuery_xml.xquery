@@ -1,1 +1,0 @@
-for $x in /ONISEP_ETABLISSEMENT/etablissement $$__WHERE__$$ $$__ORDERBY__$$ return $x
