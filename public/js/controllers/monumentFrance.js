@@ -16,17 +16,16 @@ app.controller('monumentFrance',  function($rootScope, $scope, $http, $uibModal,
 	$scope.currentPage = 1;
 
 	$scope.all_collumns = [ 
-	
+		{ name : 'REF', label: 'REF', ticked : true }, 
 		{ name : 'TICO', label: 'Tico', ticked : true }, 
 		{ name : 'STAT', label: 'Statut', ticked : true }, 
 		{ name : 'REG', label: 'Région', ticked : true },
 		{ name : 'PPRO', label: 'Description', ticked : false }, 
-		{ name : 'DPRO', label: 'Année', ticked : false }, 
+		{ name : 'DPRO', label: 'Année', ticked : true }, 
 		{ name : 'SCLE', label: 'Siècle', ticked : false }, 
-		{ name : 'COM', label: 'Commune', ticked : false }, 
+		{ name : 'COM', label: 'Commune', ticked : true }, 
 		{ name : 'DPT', label: 'Département', ticked : false },
 		{ name : 'ADRS', label: 'Adresse', ticked : false }, 
-		{ name : 'REF', label: 'REF', ticked : true }, 
 		{ name : 'INSEE', label: 'Insee', ticked : true }, 
 	];
 
