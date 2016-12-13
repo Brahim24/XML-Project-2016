@@ -1,0 +1,31 @@
+{
+  "name": "XML-Project-2016",
+  "version": "1.0.0",
+  "description": "http://www-sop.inria.fr/members/Philippe.Poulard/projet-miage-2016.html",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brahim24/XML-Project-2016.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brahim24/XML-Project-2016/issues"
+  },
+  "dependencies": {
+    "basex": "^0.7.0",
+    "body-parser": "^1.14.2",
+    "debug": "^2.1.1",
+    "express": "~4.12.4",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.10.1",
+    "fs": "0.0.2",
+    "mkdirp": "^0.5.1",
+    "serve-favicon": "^2.2.0"
+  },
+  "homepage": "https://github.com/Brahim24/XML-Project-2016#README"
+}

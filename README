@@ -1,0 +1,31 @@
+Prérequis :
+
+BaseX
+FOP 2.0
+NodeJS
+
+Download FOP2.0 : apache.crihan.fr/dist/xmlgraphics/fop/binaries/fop-2.0-bin.zip
+/!\ Ne pas oublier d'ajouter le path du dossier fop2.0 dézipper dans vos variables d'environnements !
+
+Données :
+http://www-sop.inria.fr/members/Philippe.Poulard/projet-miage-2015.html
+
+Mise en place du serveur : 
+
+Base de données :
+
+	Mise en place d'une bdd basex nommée 'data_twx' contenant le fichier présent à data/etablissement_superieur.xml
+	# basex
+	# create db data_twx data/etablissement_superieur.xml
+	# quit
+	# basexserver
+
+Serveur Web :  
+
+	Mise à jour des dépendances node
+	# npm install
+
+	Lancement du serveur :
+	# npm start
+
+http://localhost:3000
