@@ -6,8 +6,6 @@ var express = require('express'),
 	routes = require('./routes/index'),
 	mkdirp = require('mkdirp'),
 	session = require('express-session');
-
-mkdirp(__dirname + "/tmp", function(err) {});
  
 var app = express();
 app.engine('.html', exphbs({defaultLayout: 'default_layout', extname: '.html'}));

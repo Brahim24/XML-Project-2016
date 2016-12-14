@@ -115,20 +115,6 @@ router.get('/get', function(req, res) {
 	});
 });
 
-router.get('/export/json', function(req, res) {
-	parameters = checkAndGetSessionParameters(req.session);
-	res.end(JSON.stringify( truncateList(parameters.last_json_result, 0, parameters.last_json_result.length) ));
-});
-
-router.get('/export/xml', function(req, res) {
-	parameters = checkAndGetSessionParameters(req.session);
-	var str_query = magicQueryXML.replace('$$__WHERE__$$', parameters.where).replace('$$__ORDERBY__$$', "order by $x/" + parameters.orderBy);
-	basex_session.query(str_query).execute(function (err, query_result) {
-		if (err) throw err;
-		res.end("<csv_data>\n" + query_result.result + "\n</csv_data>");
-	});
-});
-
 
 
 module.exports = router;

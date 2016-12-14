@@ -2,7 +2,7 @@ for $x in /csv_data/row $$__WHERE__$$ $$__ORDERBY__$$ return
 json:serialize(
 	element json { attribute type { 'object' },
 		
-                element REF { string($x/REF) },
+        element REF { string($x/REF) },
 		element ETUD { string($x/ETUD) },
 		element REG { string($x/REG) },
 		element DPT { string($x/DPT) },
