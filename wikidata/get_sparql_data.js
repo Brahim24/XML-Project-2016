@@ -18,7 +18,11 @@ function GET_SPARQL_DATA(merimeeID, callback) {
 }
 
 
+<<<<<<< HEAD
  GET_SPARQL_DATA("PA17000024", function(err, body) {
+=======
+ GET_SPARQL_DATA("PA17000048", function(err, body) {
+>>>>>>> origin/master
         if (err) {
             console.log(err);
         } else {
