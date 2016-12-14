@@ -8,11 +8,10 @@
 	URL : http://localhost:8024
 
 	BdD :
-		Récupération de la bdd basex nommée 'merimee_HL'
-		# basex
-		# create db merimee_HL 
-		# quit
-		# basexserver
+		Dans le dossier /data le fichier merimee-MH.xml contient seulement quelques centaines de tuples afin de tester notre plateforme avec plus de rapidité.
+		Récupération de la bdd baseX nommée 'Merimee_HL'
+		# BaseX
+		# création de la db merimee_HL qui se trouve dans le dossier /data
 	
 	Serveur Web :  
 	
@@ -22,3 +21,5 @@
 		Lancement du serveur :
 		# npm start
 
+	Lancement :
+	node server.js

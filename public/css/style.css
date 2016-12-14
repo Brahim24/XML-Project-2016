@@ -1,6 +1,7 @@
 body, html {
   background-color : white;
   font-family: 'Arial', sans-serif;
+  height: 60%; margin: 0; padding: 0; 
 }
 
 header {
@@ -19,3 +20,10 @@ footer {
   padding: 25px;
 }
 
+.img-center{
+	margin-top: 15px;
+}
+
+#map { height: 300px;
+	width: 100%;
+ }

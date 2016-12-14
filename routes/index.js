@@ -129,11 +129,6 @@ router.get('/export/xml', function(req, res) {
 	});
 });
 
-router.get('/maps', function(req, res) {
-	res.render('maps');
-});
-
-
 
 
 module.exports = router;
